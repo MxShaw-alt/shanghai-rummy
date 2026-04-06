@@ -480,7 +480,10 @@ export default function App() {
           <div>
             <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:16}}>
               <div style={{fontSize:22,fontWeight:900}}>Games</div>
-              <button onClick={()=>{setActiveGameId(null);setPage("play");}} style={{background:"linear-gradient(135deg,#4ade80,#16a34a)",color:"#0a0f1e",border:"none",borderRadius:14,padding:"12px 20px",fontWeight:800,fontSize:14,cursor:"pointer",boxShadow:"0 4px 15px rgba(74,222,128,0.3)"}}>+ New Game</button>
+              <div style={{display:"flex",gap:8}}>
+                <button onClick={fetchGames} style={{background:"rgba(255,255,255,0.08)",border:"1px solid rgba(255,255,255,0.15)",color:"#fff",borderRadius:14,padding:"12px 14px",fontWeight:700,fontSize:16,cursor:"pointer"}}>🔄</button>
+                <button onClick={()=>{setActiveGameId(null);setPage("play");}} style={{background:"linear-gradient(135deg,#4ade80,#16a34a)",color:"#0a0f1e",border:"none",borderRadius:14,padding:"12px 20px",fontWeight:800,fontSize:14,cursor:"pointer",boxShadow:"0 4px 15px rgba(74,222,128,0.3)"}}>+ New Game</button>
+              </div>
             </div>
 
             {inProgress.length>0&&<>
